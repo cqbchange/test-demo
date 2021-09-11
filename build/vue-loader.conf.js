@@ -15,8 +15,10 @@ module.exports = {
   cacheBusting: config.dev.cacheBusting,
   transformToRequire: {
     video: ['src', 'poster'],
+    audio: 'src',
     source: 'src',
     img: 'src',
     image: 'xlink:href'
-  }
+  },
+  preserveWhitespace:false
 }

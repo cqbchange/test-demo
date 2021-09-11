@@ -1,0 +1,353 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2;
+    font-family: "PingFang SC", "Helvetica Neue", Helvetica, "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+}
+
+/*定义滚动条 内阴影+圆角*/
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+    background-color: white;
+}
+
+::-webkit-scrollbar-thumb {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    background-color: rgba(221, 222, 224);
+}
+
+
+#app {
+    width: 100%;
+}
+
+[v-clock] {
+    display: none;
+}
+
+.el-container {
+    width: 100%;
+    height: 100vh;
+    padding: 0;
+    /*border-radius: 5px;*/
+    /* box-shadow: #dedede 2px 5px 20px 4px; */
+}
+
+.el-aside {
+    height: 100%;
+    background-color: #232639;
+    overflow: hidden;
+    /*border-radius: 5px 0px 0px 5px;*/
+}
+
+.el-header {
+    background: #FFFFFF;
+    display: flex;
+    align-items: center;
+    padding-left: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.topBtn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.head-box {
+    /* width: 250px; */
+    height: 75px;
+    padding-right: 20px;
+    box-sizing: border-box;
+    background: url(../images/userbg.png) no-repeat;
+    background-size: 100%;
+    font-size: 16px;
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    padding-left: 22px;
+}
+
+.head-box .head {
+    width: 40px;
+    height: 40px;
+}
+
+.head-box .head img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.head-box .name {
+    margin: 0 12px 0 9px;
+}
+
+.head-box .jiao {
+    width: 0;
+    height: 0;
+    border-top: 5px solid #FFF;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-top:4px;
+}
+
+
+.el-main {
+    height: 100%;
+    margin: 15px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #fff;
+    box-sizing: border-box;
+}
+
+.pages {
+    background: #FFF;
+    /* border: 1px solid #ebeef5; */
+    border-top: none;
+    /* height: 5vh; */
+    margin-top: 22px;
+    display: flex;
+    justify-content: flex-end;
+    /* align-items: center; */
+    position: relative;
+}
+
+.pages .el-pagination__total {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 5vh !important;
+    line-height: 5vh !important;
+    display: block !important;
+}
+
+.el-table {
+    font-size: 14px;
+}
+
+/* 自定义头部form */
+.form-inline-box {
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-inline-box .el-form-item-right .el-form-item {
+    width: 200px;
+}
+
+.form-inline-box .el-form-item-right .el-form-item:last-child {
+    margin-right: 0;
+}
+
+/* 自定义按钮样式 */
+.el-button {
+    border-radius: 6px;
+}
+
+.el-button.my-def-btn {
+    border: 1px solid #458AFF;
+    color: #458AFF;
+}
+
+.el-button.my-blue-btn {
+    background: linear-gradient(90deg, #73A7FF, #448AFF);
+}
+
+/* 自定义搜索框样式 */
+.input-search-btn .el-input__inner {
+    border-right: none;
+    border-radius: 6px 0 0 6px !important;
+}
+
+.input-search-btn .el-input-group__append {
+    border-radius: 0 6px 6px 0;
+}
+
+.input-search-btn .el-input__inner:hover,
+.input-search-btn .el-input__inner:focus {
+    border-color: #DCDFE6;
+}
+
+
+.input-search-btn .el-button {
+    background: #FFF !important;
+    border: none !important;
+    font-size: 18px;
+    margin: 0 -20px;
+    padding: 7px 12px 8px;
+    color: #333333 !important;
+}
+
+
+/* 自定义表格样式 */
+.my-table {
+    border: none;
+    border-radius: 10px;
+}
+
+.my-table::after,
+.my-table::before {
+    width: 0 !important;
+    height: 0 !important;
+}
+
+.my-tabler .el-table__fixed-right::before,
+.my-tabler .el-table__fixed::before {
+    width: 0 !important;
+    height: 0 !important;
+}
+
+.el-table__fixed::before {
+    width: 0 !important;
+    height: 0 !important;
+}
+
+.el-table__fixed-right::before {
+    width: 0 !important;
+    height: 0 !important;
+}
+
+.my-table-header {
+    height: 56px;
+    color: #333;
+    background: #EFF5FF;
+}
+
+.my-table-header th {
+    background: #EFF5FF;
+}
+
+.my-table-header th:last-child {
+    border-right: none;
+}
+
+.el-table__row td:first-child {
+    border-left: 1px solid #EBEEF5;
+}
+
+.el-table__row:last-child td:first-child {
+    border-radius: 0 0 0 10px;
+}
+
+.el-table__row:last-child td:last-child {
+    border-radius: 0 0 10px 0;
+}
+
+
+/* 自定义弹窗 */
+.my-dialog {
+    border-radius: 10px;
+}
+
+.my-dialog .el-dialog__header {
+    height: 52px;
+    line-height: 52px;
+    padding: 0 20px;
+    border-radius: 10px 10px 0 0;
+    background: #EFF5FF;
+    color: #111111;
+}
+
+.my-dialog .el-dialog__headerbtn {
+    top: 17px;
+    color: #333;
+}
+
+.my-dialog .el-dialog__headerbtn .el-icon {
+    font-size: 18px;
+    color: #333;
+}
+
+.my-dialog .dialog-footer {
+    display: flex;
+    justify-content: center;
+}
+
+.my-dialog .dialog-footer .el-button {
+    padding: 12px 26px;
+    box-sizing: border-box;
+}
+
+.my-lab-title {
+    height: 20px;
+    padding-left: 10px;
+    margin-bottom: 30px;
+    border-left: 3px solid #488CFF;
+    font-size: 10px;
+    font-weight: bold;
+    color: #333333;
+}
+
+.my-dialog .el-row {
+    margin-left: -4px !important;
+    flex-wrap: wrap;
+}
+
+.my-dialog .el-form-item__label {
+    color: #333;
+
+}
+
+.my-dialog .el-date-editor,
+.my-dialog .el-select {
+    width: 100%;
+}
+
+.my-dialog .timeArr {
+    position: relative;
+}
+
+.my-dialog .timeArr .icon-timeArr {
+    position: absolute;
+    top: 0;
+    right: -36px;
+    width: 30px;
+    height: 36px;
+    line-height: 36px;
+    text-align: center;
+    color: #F22727;
+    font-weight: 600;
+}
+
+.my-dialog .el-checkbox__inner {
+    border-color: #333;
+}
+
+.my-dialog .el-checkbox__label {
+    color: #333;
+}
+
+/* 上传图片样式 */
+.upload-img-box {
+    display: flex;
+}
+
+.upload-img-box .el-form-item {
+    width: 100%;
+}
+
+.upload-img-box .upload-img {
+    margin-left: 10px;
+}
+
+.upload-img-box .upload-img .el-button--primary {
+    font-size: 14px;
+    color: #5292FE;
+    background: #E4EEFF;
+    border: none;
+    border-radius: 6px;
+    padding: 10px;
+}
+
+
+/* 自定义圆角 */
+.el-date-editor,
+.el-input__inner {
+    border-radius: 6px !important;
+}

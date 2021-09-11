@@ -1,21 +1,37 @@
-# vue-demo
+# 基于 vue-cli 2 实现，vue 支持多模块项目模板
 
-> A Vue.js project
+ [查看博客](https://blog.csdn.net/xlz26296/article/details/79133441)
 
-## Build Setup
+ 1. 支持多模块项目
+ 2. 子模块支持独立运行、编译打包
+ 3. 支持生成 zip 包
+ 4. 简化代理配置
 
 ``` bash
-# install dependencies
+# 切换为官网：1
+npm config set registry https://registry.npmjs.org
+
+#切换为淘宝镜像
+npm config set registry https://registry.npm.taobao.org
+
+# 安装依赖
 npm install
 
-# serve with hot reload at localhost:8080
-npm run dev
+# （单个模块）启动本地服务
+npm run dev:模块名
 
-# build for production with minification
+# （所有模块）编译所有生产包
 npm run build
 
-# build for production and view the bundle analyzer report
-npm run build --report
-```
+# （单个模块）编译模块生产包
+npm run build:模块名
 
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+# （所有模块）编译并生成 zip 生产包
+npm run build:zip
+
+# （单个模块）编译并生成 zip 生产包
+npm run build:模块名:zip
+
+# （单个模块）编译打包分析器报告
+npm run build:模块名 --report
+```
